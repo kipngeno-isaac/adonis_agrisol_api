@@ -30,4 +30,3 @@ Run the following command to run startup migrations.
 adonis migration:run
 ```
 # adonis_agrisol_api
-# adonis_agrisol_api
