@@ -8,6 +8,8 @@ class CropSchema extends Schema {
     this.create('crops', (table) => {
       table.increments()
       table.string('name', 100).notNullable()
+      table.string('image_url', 180)
+      table.string('best_months', 180)
       table.integer('duration').unsigned()
       table.text('description')
       table.string('links', 180)
