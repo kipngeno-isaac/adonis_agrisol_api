@@ -18,13 +18,14 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-Route.group(()=>{
-    Route.post('register', 'AuthController.register')
-    Route.post('login', 'AuthController.login')
+Route.group(() => {
+  Route.post('register', 'AuthController.register')
+  Route.post('login', 'AuthController.login')
 }).prefix('api/auth')
 
-Route.group(()=>{
-    Route.resource('crops', 'CropController')
-    Route.resource('produce', 'ProduceController')
-    Route.resource('prices', 'PriceController')
+Route.group(() => {
+  Route.resource('crops', 'CropController')
+  Route.resource('produce', 'ProduceController')
+  Route.resource('prices', 'PriceController')
+  Route.resource('market', 'MarketController')
 }).prefix('api')
